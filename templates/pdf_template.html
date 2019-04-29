@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2 align="center"><b>The Report</b></h2>
+<p align="right">Organization: {{ org_name }}</p>
+<p align="right">Reported: {{ report_date }}</p>
+<p align="right">Created: {{ render_timestamp }}</p>
+
+
+<table style="width:100%; height:250px">
+    <tr>
+        <td width="100%" height="250" align="center">for item in inventory:
+            {% for (item_name, item_price) in inventory %}
+                <p> {{ item_name }}: {{ item_price }}</p>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+</body>
+</html>
